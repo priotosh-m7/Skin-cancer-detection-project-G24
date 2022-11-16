@@ -34,11 +34,15 @@
         <div class="container"><a class="navbar-brand logo" href="#"><strong><span style="color: rgb(13, 75, 63);">Melanoma Prognosis &amp; Care</span></strong></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href=""><span style="color: rgb(13, 79, 66);">Home</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#login"><span style="color: rgba(13, 79, 66, 0.6);">login</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pricing.html"><span style="color: rgba(13, 79, 66, 0.6);">Skin cancer care</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#aboutus"><span style="color: rgba(13, 79, 66, 0.6);">About Us</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/"><span style="color: rgb(13, 79, 66);">Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/#login"><span style="color: rgba(13, 79, 66, 0.6);">login</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/#analyzer"><span style="color: rgba(13, 79, 66, 0.6);">Skin cancer care</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/#aboutus"><span style="color: rgba(13, 79, 66, 0.6);">About Us</span></a></li>
+                    
                     <li class="nav-item"><a class="nav-link active" href="/templates/contact-us.html"><span style="color: rgba(13, 79, 66, 0.6);">Contact Us</span></a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/#login"><span style="color: rgba(13, 79, 66, 0.6);">{{user}}</span></a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

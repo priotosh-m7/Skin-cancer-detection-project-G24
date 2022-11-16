@@ -5,6 +5,9 @@ from django.contrib import messages
 from django.contrib.auth import authenticate,login
 from django.shortcuts import redirect
 from django.views.decorators.csrf import csrf_exempt
+from PIL import Image
+
+import os
 def index(request):
     return render(request,'index.html')
 
@@ -26,14 +29,19 @@ def registration(request):
         myuser.last_name = lname
         myuser.save()
         messages.success(request,"Your account has been created successfully")
-        return redirect(login)
+        return redirect(user_login)
 
     return render(request,'about-us.html')
 
 def upload(request):
-    return render(request,'features.html')
+    images = request.GET['image']
+    img = Image.open(images)
+    
+    #image = request.FILES['image']
+    params = {'img':images}
+    return render(request,'contact-us.html',params)
 @csrf_exempt
-def login(request):
+def user_login(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
@@ -41,8 +49,13 @@ def login(request):
         user = authenticate(username=username,password=password)
 
         if user is not None:
+            params = {'user':username}
             login(request,user)
+            return redirect(index)
         else:
             messages.error(request,"Bad Credentials")
 
     return render(request,'index.html')
+
+def spare(request):
+    return render(request,'contact-us.html')

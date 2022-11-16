@@ -24,11 +24,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('index.html',views.index),
+    path('',views.index),
     path('registration',views.registration),
-    path('login',views.login),
+    path('login',views.user_login),
     path('upload',views.upload),
-]
+    path('spare',views.spare),
+    path('img/',include('polls.urls')),
+]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
 
 

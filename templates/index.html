@@ -390,11 +390,14 @@ div {
         <div class="container"><a class="navbar-brand logo" href="#"><strong><span style="color: rgb(13, 75, 63);">Melanoma Prognosis &amp; Care</span></strong></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="/index.html"><span style="color: rgb(13, 79, 66);">Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href=""><span style="color: rgb(13, 79, 66);">Home</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#login"><span style="color: rgba(13, 79, 66, 0.6);">login</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="/pricing.html"><span style="color: rgba(13, 79, 66, 0.6);">Skin cancer care</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#aboutus"><span style="color: rgba(13, 79, 66, 0.6);">About Us</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="/templates/contact-us.html"><span style="color: rgba(13, 79, 66, 0.6);">Contact Us</span></a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="/templates/contact-us.html"><span style="color: rgba(13, 79, 66, 0.6);">{{user}}</span></a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -547,18 +550,8 @@ div {
                         <p class="fs-6" id="pcarousel1"><em><span style="color: rgb(247, 251, 255);">Follow these easy steps to generate your reports</span></em></p>
                     </div>
                 </div>
-                <form class="mt-2" method="get" action="upload">
-                    <div class="col-lg-12">
-                <div class="form-group">
-                  <input class="form-control" type="file" placeholder="choose a file">
-                    <div class="col-lg-6">
-                <button type="submit" style = "background: #0a9474;     background: linear-gradient(to right, #348AC7, #0a9474);" class="btn btn-md btn-block btn-danger-gradiant text-white border-0"><span> Upload</span></button>
-                <!--  -->
-              </div>
-
-                </div>
-              </div>
-                </form>
+                <br>
+                <button class="btn btn-primary" type="button" href='img/' onclick="location.href='img/'" style= "align-content: center;">Proceed to Lesion Analyzer</button>
             </div>
         </section>
         <section class="clean-block about-us" id="aboutus" style="background-image: url('{% static 'assets/img/tech/Untitled design (3).png'%}');">

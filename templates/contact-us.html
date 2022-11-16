@@ -5,14 +5,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Contact Us - Brand</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
-    <link rel="stylesheet" href="/assets/css/Elegant-Registration-Form.css">
+
+    <link rel="stylesheet" href="{% static 'assets/css/Elegant-Registration-Form.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="/assets/css/Login-Form-Basic-icons.css">
-    <link rel="stylesheet" href="/assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/vanilla-zoom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Basic-icons.css' %}">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Elegant-Registration-Form.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+  
+    
 </head>
 
 <body>
@@ -44,6 +58,30 @@
                     <div class="mb-3"></div><button class="btn btn-primary" type="submit">Send</button>
                 </form>
             </div>
+            <div class="imagedisplay">
+                <img src="{{img}}" alt="no image">
+            </div>
+
+            {% if submitted %}
+            Your file uploaded successfully
+    
+        {% else %}
+        <form method = "post" enctype="multipart/form-data" action=""> 
+            {% csrf_token %} 
+            <div class="mb-3"><label class="form-label" for="name">Name</label></div>
+            {{ form.image}} 
+            <div class="mb-3"><label class="form-label" for="name">Name</label></div>
+            {{form.user}}
+            <button type="submit btn btn-secondary">Upload</button> 
+        </form> 
+    
+    
+        {% endif %}
+       
+
+
+            
+
         </section>
     </main>
     <footer class="page-footer dark">
@@ -92,6 +130,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="/assets/js/vanilla-zoom.js"></script>
     <script src="/assets/js/theme.js"></script>
+    <script src="{% static 'assets/js/script.min.js' %}"></script>
+    <script src="{% static 'assets/js/bs-init.js' %}"></script>
+    <script src="{% static 'assets/js/vanilla-zoom.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
 </body>
 
 </html>

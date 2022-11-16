@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Contact Us - Brand</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+    <link rel="stylesheet" href="{% static 'assets/css/Elegant-Registration-Form.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/vanilla-zoom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Basic-icons.css' %}">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Elegant-Registration-Form.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+  
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#"><strong><span style="color: rgb(13, 75, 63);">Melanoma Prognosis &amp; Care</span></strong></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href=""><span style="color: rgb(13, 79, 66);">Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#login"><span style="color: rgba(13, 79, 66, 0.6);">login</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pricing.html"><span style="color: rgba(13, 79, 66, 0.6);">Skin cancer care</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aboutus"><span style="color: rgba(13, 79, 66, 0.6);">About Us</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/templates/contact-us.html"><span style="color: rgba(13, 79, 66, 0.6);">Contact Us</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page contact-us-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading" style="padding: 0%;">
+                    
+                </div>
+                {% if submitted %}
+            
+            <h2 class="text-info"><span style="color: rgba(8, 105, 86, 0.7);">Upload Successful Here are your results</span></h2>
+                    <p><span style="color: rgba(8, 105, 86, 0.6);">Our machine learning model has made the following analysis/prediction </span>&nbsp;</p>
+            <div ">
+                <div><img src="{{context.image.url}}" alt="no image" height="300px" width="300px"></div>
+                <br>
+                <br>
+                <h4 class="text-info"><span style="color: rgba(8, 105, 86, 0.7);">{{imagename}}</span></h4>
+                <br>
+                <br>
+                <button class="btn btn-primary" type="button" href='' onclick="location.href=''" style= "align-content: center;">Scan another image</button>
+            </div>
+    
+        {% else %}
+        <h2 class="text-info" style="align-items: center;"><span style="color: rgba(8, 105, 86, 0.7); text-align: center;">Lesion Analyzer</span></h2>
+        <p><span style="color: rgba(8, 105, 86, 0.6);">Upload a .jpg/.jpeg/.png image of your lesion </span>&nbsp;</p>
+                <form style="border-top-color: rgba(8,105,86,0.95);" method = "post" enctype="multipart/form-data" action="">
+                   {% csrf_token  %}
+
+            <div class="mb-3"><label class="form-label" for="image">Upload image</label></div>
+                <div>{{form.image}}</div>
+
+        
+                    <div style="width: 100%;  margin-top: 10px;">
+                        
+                    <div class="mb-3" style="width: 100%;"><label class="form-label" for="username">Enter the generated number</label></div>
+                    <div>{{no}}</div>
+                    <br>
+                    {{ form.user}} 
+                    <br>
+                    </div>
+                    
+                    <div class="mb-3"></div><button class="btn btn-primary" type="submit">Upload</button>
+                    
+                </form>
+
+                {% endif %}
+            </div>
+          <!----  <div class="imagedisplay">
+                <img src="{{img}}" alt="no image">
+            </div>
+
+            {% if submitted %}
+            Your file uploaded successfully
+    
+        {% else %}
+        <form method = "post" enctype="multipart/form-data" action=""> 
+            {% csrf_token %} 
+            <div class="mb-3"><label class="form-label" for="name">Name</label></div>
+            {{ form.image}} 
+            <div class="mb-3"><label class="form-label" for="name">Name</label></div>
+            {{form.user}}
+            {{ form.image}} 
+            {{form.user}}
+            <button type="submit btn btn-secondary">Upload</button> 
+        </form> 
+    
+    
+        {% endif %}
+
+    -->
+       
+
+
+            
+
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2022 Copyright Text</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="/assets/js/vanilla-zoom.js"></script>
+    <script src="/assets/js/theme.js"></script>
+    <script src="{% static 'assets/js/script.min.js' %}"></script>
+    <script src="{% static 'assets/js/bs-init.js' %}"></script>
+    <script src="{% static 'assets/js/vanilla-zoom.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+</body>
+
+</html>

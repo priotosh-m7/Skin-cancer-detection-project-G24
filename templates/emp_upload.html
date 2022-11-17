@@ -54,22 +54,30 @@
                     
                 </div>
                 {% if submitted %}
-            
-            <h2 class="text-info"><span style="color: rgba(8, 105, 86, 0.7);">Upload Successful Here are your results</span></h2>
-                    <p><span style="color: rgba(8, 105, 86, 0.6);">Our machine learning model has made the following analysis/prediction </span>&nbsp;</p>
-            <div ">
-                <div><img src="{{context.image.url}}" alt="no image" height="300px" width="300px"></div>
+                <br>
+            <h1 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7);">Upload Successful!!!!!</span></h1>
+            <br>
+            <h2 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7);">Here are you results</span></h2>
+            <br>
+                    <p style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.6);">Our machine learning model has made the following analysis/prediction </span>&nbsp;</p>
+            <div style="width: 100%;">
+                <div style="width:100% ; display:flex;">
+                <div style="width: 50%; text-align: center;"><img src="{{context.image.url}}" alt="no image" height="300px" width="300px"><br><br> <h4 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7); align-items: center;">Uploaded Image</span></h4></div>
+                <div style="width: 50%; text-align: center;"><img src="{{context.image.url}}.jpg" alt="no image" height="300px" width="300px"> <br> <br><h4 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7); align-items: center;">De-Noised Image</span></h4></div>
+            </div>
                 <br>
                 <br>
-                <h4 class="text-info"><span style="color: rgba(8, 105, 86, 0.7);">{{imagename}}</span></h4>
+                <h2 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7);">Result : {{imagename}}</span></h2>
                 <br>
                 <br>
                 <button class="btn btn-primary" type="button" href='' onclick="location.href=''" style= "align-content: center;">Scan another image</button>
             </div>
     
         {% else %}
-        <h2 class="text-info" style="align-items: center;"><span style="color: rgba(8, 105, 86, 0.7); text-align: center;">Lesion Analyzer</span></h2>
-        <p><span style="color: rgba(8, 105, 86, 0.6);">Upload a .jpg/.jpeg/.png image of your lesion </span>&nbsp;</p>
+        <br>
+        <h2 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7); text-align: center;">Lesion Analyzer</span></h2>
+        <br>
+        <p style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.6);text-align: center;">Upload a .jpg/.jpeg/.png image of your lesion </span>&nbsp;</p>
                 <form style="border-top-color: rgba(8,105,86,0.95);" method = "post" enctype="multipart/form-data" action="">
                    {% csrf_token  %}
 

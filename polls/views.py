@@ -26,8 +26,25 @@ def index(request):
             p_image = UploadImage.objects.get(user=user)
             from keras.utils import load_img
             import tensorflow
+            import cv2
             
+
             img = tensorflow.keras.preprocessing.image.load_img("C:\\SCDProject"+p_image.image.url,target_size = (100,100))
+            
+            #denoising
+
+            src = cv2.imread("C:\\SCDProject"+p_image.image.url)
+            grayScale = cv2.cvtColor(src, cv2.COLOR_RGB2GRAY)
+            kernel = cv2.getStructuringElement(1, (17, 17))
+            blackhat = cv2.morphologyEx(grayScale, cv2.MORPH_BLACKHAT, kernel)
+            ret, thresh2 = cv2.threshold(blackhat, 10, 255, cv2.THRESH_BINARY)
+            dst = cv2.inpaint(src, thresh2, 1, cv2.INPAINT_TELEA)
+    # cv2.imshow("InPaint", dst)
+            cv2.imwrite( "C:\\SCDProject"+p_image.image.url+".jpg", dst, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
+            
+            cleaned_img = tensorflow.keras.preprocessing.image.load_img("C:\\SCDProject"+p_image.image.url,target_size = (100,100))
+            
+            
             import warnings
             import numpy as np
             warnings.filterwarnings('ignore')

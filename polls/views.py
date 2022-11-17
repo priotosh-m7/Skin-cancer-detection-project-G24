@@ -9,7 +9,7 @@ import random
 
 
 def index(request):
-    model_o = load_model('C:\\SCDProject\\static\\model_mal_beg_70.h5')
+    model_o = load_model('C:\\SCDProject\\static\\model_melanoma_non_new_10.h5')
     submitted = False
     imagename = ""
     result = []
@@ -29,7 +29,7 @@ def index(request):
             import cv2
             
 
-            img = tensorflow.keras.preprocessing.image.load_img("C:\\SCDProject"+p_image.image.url,target_size = (100,100))
+            img = tensorflow.keras.preprocessing.image.load_img("C:\\SCDProject"+p_image.image.url,target_size = (200,200))
             
             #denoising
 
@@ -42,20 +42,20 @@ def index(request):
     # cv2.imshow("InPaint", dst)
             cv2.imwrite( "C:\\SCDProject"+p_image.image.url+".jpg", dst, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
             
-            cleaned_img = tensorflow.keras.preprocessing.image.load_img("C:\\SCDProject"+p_image.image.url,target_size = (100,100))
+            cleaned_img = tensorflow.keras.preprocessing.image.load_img("C:\\SCDProject"+p_image.image.url+".jpg",target_size = (200,200))
             
             
             import warnings
             import numpy as np
             warnings.filterwarnings('ignore')
-            test_image = tensorflow.keras.preprocessing.image.img_to_array(img)
+            test_image = tensorflow.keras.preprocessing.image.img_to_array(cleaned_img)
             test_image = test_image/255
             test_image = np.expand_dims(test_image, axis = 0)
             result = model_o.predict(test_image)
             if result[0][0]>0:
-                imagename += "Melanoma"
-            else:
                 imagename += "Non-Melanoma"
+            else:
+                imagename += "Melanoma"
             
 
         else:

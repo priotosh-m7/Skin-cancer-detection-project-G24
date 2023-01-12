@@ -53,9 +53,9 @@ def index(request):
             test_image = np.expand_dims(test_image, axis = 0)
             result = model_o.predict(test_image)
             if result[0][0]>0:
-                imagename += "Non-Melanoma"
+                imagename += "Non-Melanoma/ Normal "
             else:
-                imagename += "Melanoma"
+                imagename += "Melanoma / Anomaly Detected"
             
 
         else:

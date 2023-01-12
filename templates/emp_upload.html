@@ -71,6 +71,12 @@
                 <br>
                 <br>
                 <button class="btn btn-primary" type="button" href='' onclick="location.href=''" style= "align-content: center;">Scan another image</button>
+                <br>
+                <br>
+                <h4 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7);">Disclaimer : This is just a precautionary tool which is not medically certified. Consult a dermatologist for further concrete diagnosis </span></h4>
+                
+                            
+            
             </div>
     
         {% else %}
@@ -78,7 +84,20 @@
         <h2 class="text-info" style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.7); text-align: center;">Lesion Analyzer</span></h2>
         <br>
         <p style="text-align: center;"><span style="color: rgba(8, 105, 86, 0.6);text-align: center;">Upload a .jpg/.jpeg/.png image of your lesion </span>&nbsp;</p>
-                <form style="border-top-color: rgba(8,105,86,0.95);" method = "post" enctype="multipart/form-data" action="">
+        <br>
+        <p><span style="color: rgba(8, 105, 86, 0.6);text-align: center;">Guidelines for uploading the image : 
+        </span>&nbsp;</p>  
+        <li><span style="color: rgba(8, 105, 86, 0.6);text-align: center;"> Level your camera lens at the area of concern for your skin, about 35 centimetres away, directly just above area, and capture the part of the body it is on.
+        </span>&nbsp;</li> 
+        <li><span style="color: rgba(8, 105, 86, 0.6);text-align: center;">Adjust your camera to get a better close-up. Re-focus the lens (if necessary) by tapping the screen of your phone right before taking the photograph and employing the "3 second timer" trick.
+        </span>&nbsp;</li>  
+        <li><span style="color: rgba(8, 105, 86, 0.6);text-align: center;">Crop the image as much as possible to ensure the lesion/rash occupies the majority of the image
+        </span>&nbsp;</li>  
+        <br>
+        <p><span style="color: rgba(8, 105, 86, 0.6);text-align: center;">Keep the images as clear and in focus as possible so that  accuracy of the output is not decreased.
+        </span>&nbsp;</p>     
+        
+        <form style="border-top-color: rgba(8,105,86,0.95);" method = "post" enctype="multipart/form-data" action="">
                    {% csrf_token  %}
 
             <div class="mb-3"><label class="form-label" for="image">Upload image</label></div>

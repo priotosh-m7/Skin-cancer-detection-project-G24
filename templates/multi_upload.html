@@ -7,6 +7,9 @@
     <title>Multiple Classifier</title>
     
     {% load static %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
@@ -79,8 +82,27 @@
     </div>
 
 
+
                 <br>
                 <br>
+<div id="cont" style="padding: 15px;
+    text-align: center;
+
+    margin: 20px;
+    box-shadow: 1px 1px 5px 5px rgb(105, 104, 104);
+
+
+    border-width: 15px; width: 60%; height: 100%;">
+
+
+
+
+<canvas id="myChart" style="display: block; "></canvas>
+
+</div>
+                    <br>
+                    <br>
+
 
                 <button class="btn btn-primary" type="button" href='' onclick="location.href=''" style= "align-content: center;">Scan another image</button>
                 <br>
@@ -202,6 +224,7 @@
             <p>© 2022 Copyright Text</p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
@@ -210,6 +233,33 @@
     <script src="{% static 'assets/js/bs-init.js' %}"></script>
     <script src="{% static 'assets/js/vanilla-zoom.js' %}"></script>
     <script src="{% static 'assets/js/theme.js' %}"></script>
+
+<script>
+
+var xValues = ["Actinic keratosis", "Basal cell carcinoma", "Benign Keratoris","Dermatofibroma","Healthy Skin","melanocytic nevus","Melanoma","Squamous cell carcinoma","Vascular lesion"];
+      var yValues = {{ data }};
+      var barColors = ["#f34257","blue","orange","brown","pink","gray", "black", "#1ce9b6","green"];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Prediction results"
+    }
+
+  }
+  //plugins: [ChartDataLabels]
+});
+</script>
 </body>
 <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js”></script>
 <script src=”https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js”></script>

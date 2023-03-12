@@ -81,18 +81,24 @@ def index(request):
 
 
 def index2(request):
-    model_o = load_model('C:\\SCDProject\\static\\model_ab_pm_0802.h5')
+    model_o = load_model('C:\\SCDProject\\static\\multiclass_AB_07-03-2023_96.51.h5')
     submitted = False
     imagename = ""
     result = []
+    chartdata = []
     results = []
     p_image = ""
     major = []
     dict = {0: 'acnitic keratosis',
             1: 'basal cell carcinoma',
             2: 'benign keratosis',
-            3: 'melanoma',
-            4: 'squamous cell carcinoma'}
+            3: 'dermatofibroma',
+            4: 'healthy skin',
+            5: 'melanocytic nevus',
+            6: 'melanoma',
+
+            7: 'squamous cell carcinoma',
+            8: 'vascular lesion'}
 
     if request.method == "POST":
         form = UploadImageForm(request.POST, request.FILES)
@@ -123,7 +129,7 @@ def index2(request):
             cv2.imwrite("C:\\SCDProject" + p_image.image.url + ".jpg", dst, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
 
             cleaned_img = tensorflow.keras.preprocessing.image.load_img("C:\\SCDProject" + p_image.image.url + ".jpg",
-                                                                        target_size=(180, 180))
+                                                                        target_size=(200, 200))
 
             import warnings
             import numpy as np
@@ -135,18 +141,21 @@ def index2(request):
             result = np.array(result)
             major = dict.get(result.argmax())
             sum = 0
-            for i in range(0, 5):
+            for i in range(0, 9):
                 if result[0][i] >= 0:
                     sum += result[0][i]
 
             sum = abs(sum)
 
-            for i in range(0, 5):
+            for i in range(0, 9):
                 if result[0][i] >= 0:
                     perc = ((result[0][i]) / sum) * 100
                     perc = round(perc,4)
+                    chartdata.append(perc)
                     imagename = dict[i] + " : "+numpy.format_float_positional(perc)+"%"
                     results.append(imagename)
+                else:
+                    chartdata.append(0)
                    # print(f"{dict[i]} : {perc}%")
 
 
@@ -166,5 +175,5 @@ def index2(request):
     no = int(random.randint(1, 999))
     return render(request, 'multi_upload.html',
                   {'form': form, 'submitted': submitted, 'context': context, 'result': result, 'no': no,
-                   'imagename': major, 'results':results})
+                   'imagename': major, 'results':results, 'data' : chartdata, 'dict':dict})
 

@@ -30,6 +30,7 @@ urlpatterns = [
     path('upload',views.upload),
     path('spare',views.spare),
     path('img/',include('polls.urls')),
+    path('info',views.info),
 ]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
 

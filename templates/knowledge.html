@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Information Page</title>
+    {% load static %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+    <link rel="stylesheet" href="{% static 'assets/css/Elegant-Registration-Form.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/vanilla-zoom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Form-Basic-icons.css' %}">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Elegant-Registration-Form.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <style>
+        #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover{
+    color:#5ce1e6
+}
+        .accordion{
+            width:100%;
+        }
+        .accordion-item{
+            background-color: var(--bs-secondary);
+            width: 100%;
+            padding-top: 0px;
+        }
+        .accordion-button{
+            background-color: rgba(212, 250, 242, 0.7);
+        }
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: rgba(77, 219, 172,.9);
+    box-shadow: inset 0 calc(var(--bs-accordion-border-width) * -1) 0 var(--bs-accordion-border-color);
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgb(92 225 230 / 18%) !important;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-active-icon);
+    color:black;
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+.accordion-button{
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+}
+.accordion-collapse{
+    width:100%;
+}
+        .accordion-button:focus {
+
+    z-index: 3;
+    border-color: #5ce1e6;
+    outline: 0;
+    box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+}
+        .accordion-button{
+            height: 120px;
+        }
+        .accordion-body{
+            font-family: 'Figtree', sans-serif;
+            font-size: large;
+            width: 100%;
+        }
+        img:hover{
+
+            background-color: #5ce1e6;
+        }
+        .rounded-circle:focus{
+            background-color: #20c997;
+        }
+        .bx{
+            padding: 3px;
+            width: 33%;
+
+            text-align: center;
+        }
+        .rounded-circle{
+            border: 4px solid;
+            border-color: #20c997;
+
+        }
+        .bg-cus{
+            background-color: rgb(29, 161, 136);
+        }
+::selection{
+    background-color: #5ce1e6;
+}
+    </style>
+
+   
+</head>
+
+<body class="bg-dark" id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#"><strong><span style="color: rgb(13, 75, 63);">Melanoma Prognosis &amp; Care</span></strong></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href=""><span style="color: rgb(13, 79, 66);">Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#login"><span style="color: rgba(13, 79, 66, 0.6);">login</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#analyzer"><span style="color: rgba(13, 79, 66, 0.6);">Skin cancer care</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aboutus"><span style="color: rgba(13, 79, 66, 0.6);">About Us</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates/contact-us.html"><span style="color: rgba(13, 79, 66, 0.6);">Contact Us</span></a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="/templates/contact-us.html"><span style="color: rgba(13, 79, 66, 0.6);">{{user}}</span></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section  id="home" style="  background-color: rgb(29, 161, 136);" >
+
+        <div class="container" style="background-color: rgba(123, 184, 182,.72);padding: 25px; ">
+            <div class="row" style="padding-top: 7%;">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: white;">What do you want to learn about</h2>
+                  <!--  <h3 class="text-muted section-subheading">Choose the Analyzer you want to test and use</h3>-->
+                </div>
+            </div>
+            <div class="row m-5" >
+                <div class="bx" ><div class="timeline-image"><a href="#df"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//df.jpg'%}" ></a></div></div>
+                <!--<div class="bx" ><div class="timeline-image"></div></div> -->
+                <div class="bx" ><div class="timeline-image"><a href="#bcc"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//bccedit.jpg'%}" ></a></div></div>
+                <!--<div class="bx" ><div class="timeline-image"></div></div> -->
+                <div class="bx" ><div class="timeline-image"><a href="#mel"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//mel.jpg'%}" ></a></div></div>
+
+            </div>
+            <div class="row m-5">
+                <div class="bx" style="width: 17%;"><div class="timeline-image"></div></div>
+                <div class="bx" ><div class="timeline-image"><a href="#nv" class="portfolio-link"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//nv.jpg'%}" ></a></div></div>
+
+                <div class="bx" ><div class="timeline-image"><a href="#ak"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//ak2.jpg'%}" ></a></div></div>
+                <div class="bx" style="width: 17%;" ><div class="timeline-image"></div></div>
+
+            </div>
+            <div class="row m-5">
+                <div class="bx" ><div class="timeline-image"><a href="#scc"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//scc.jpg'%}" ></a></div></div>
+
+                <div class="bx" ><div class="timeline-image"><a href="#vl"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//vl.jpg'%}" ></a></div></div>
+
+                <div class="bx" ><div class="timeline-image"><a href="#bk"><img class="shadow-lg rounded-circle img-fluid" src="{% static 'derm//bk2.jpg'%}" ></a></div>
+
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
+
+    <section id="ak" class="bg-light">
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: rgb(13, 75, 63);">Actinic Keratosis</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p>Actinic Keratosis describes lesions on the outer skin layer caused by too much exposure to the ultraviolet rays of sunlight. They are also the beginnings of skin cancer, most often appearing after age 40. In some areas where climate is mild year-round -- like Florida and California -- these lesions appear in much younger people.
+</p><p>People with fair skin, blond or red hair, and blue or green eyes are most at risk of developing these rough, scaly patches, or keratoses. A history of a sunburn also increases the risk. If not treated, these patches can develop into a more serious form of skin cancer, although this is unusual.
+</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+          <p>Actinic keratoses most commonly occur on areas of skin that receive lots of sun exposure -- like the face, ears, the scalp of bald men, and the backs of the hands, legs and arms. The lesions may be skin-colored, reddish-brown, or yellowish-tan. They may look like a raised bump, be flat, or may feel like a dry patch of skin. The skin-colored lesions may be noticed more by touch, because they tend to feel like sandpaper.</p>
+          <p>Actinic keratoses are not tender, but if you have a lesion that fits their description and is tender, it may have morphed into a type of skin cancer. If you have any type of skin lesion that is new, tender, bleeding or changing in appearance, you should see a dermatologist.                                                           </p>
+
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+          <p>An actinic keratosis is caused by frequent or intense exposure to UV rays from the sun or tanning beds.</p>
+
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+          <p>Anyone can develop actinic keratoses. But you're at increased risk if you:
+</p>
+
+          <ul>
+              <li>Have red or blond hair and blue or light-colored eyes
+</li>
+              <li>Have a history of a lot of sun exposure or sunburn</li>
+              <li>  Tend to freckle or burn when exposed to sunlight    </li>
+              <li>  Are older than 40                                   </li>
+              <li>  Live in a sunny place                               </li>
+              <li>  Work outdoors                                       </li>
+              <li>  Have a weakened immune system                       </li>
+
+          </ul>
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>If treated early, actinic keratosis can be cleared up or removed. If left untreated, some of these spots might progress to squamous cell carcinoma. This is a type of cancer that usually isn't life-threatening if detected and treated early.</p>
+
+
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>Your health care provider will likely be able to determine whether you have an actinic keratosis simply by looking at your skin. If there's any doubt, your health care provider may do other tests, such as a skin biopsy.
+          </p><p>During a skin biopsy, a small sample of skin is taken for analysis in a lab. A biopsy can usually be done in a clinic after a numbing injection.</p><p>
+Even after treatment for actinic keratosis, your health care provider might suggest that you have your skin checked at least once a year for signs of skin cancer.
+</p>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+          <p>Treatment for a brain tumor depends on the type, size, and location of the tumor, as well as your overall health and your preferences.</p>
+          <ul>
+              <li><strong>CryoSurgery</strong>
+                  <br><br>
+                  <p>Liquid nitrogen "freezes" the surface skin, which causes some skin redness and sometimes blistering until the area is replaced by new skin. This is the most commonly used treatment for actinic keratosis. It is a quick office procedure.</p>
+
+
+              </li>
+              <li><strong>Surgical removal and biopsy. </strong>
+                  <br><br>
+              <p>The lesion may be removed and examined if there is a possibility it has become cancerous. </p>
+              </li>
+
+              <li><strong>Photodynamic therapy </strong>
+                  <br><br>
+              <p>A chemical is applied to the skin. Then the skin is exposed to a light that activates the chemical to destroy the abnormal skin cells. There can be burning, stinging, and changes in pigmentation of the skin.      </p> </li>
+
+              <li><strong>Chemotherapy</strong>
+                  <br><br>
+                  <p> A topical cancer medicinal cream called fluorouracil is applied to the skin lesion or the entire sun-damaged area. It takes around 4 to 6 weeks to work. Usually the skin turns red and blisters before new skin appears.</p>
+              </li>
+
+              <li><strong>Chemical peel. </strong>
+                  <br><br>
+                  <p>A chemical solution is applied to the skin to cause blistering and peeling away of the actinic keratoses. Temporary redness and swelling will likely occur.
+ </p>
+              </li>
+
+              <li><strong>Dermabrasion    </strong>
+                  <br><br>
+                  <p>This uses a handheld device to "sand" the skin and improve its appearance. It can be used to treat large lesions that are often too big to treat with topical treatments. It leaves the skin red and raw and can be a painful procedure. A topical numbing ointment, nerve blocks, or other pain medications are often used.
+</p>
+
+              </li>
+
+              <li><strong>Immunomodulator therapy  </strong>
+                  <br><br>
+                  <p>Imiquimod cream, ingenol gel, or diclofenac gel works much like fluorouracil to selectively rid the skin of abnormal cells. There may be redness, itching, swelling, crusting, and peeling..
+</p>
+
+              </li>
+
+              <li><strong>Microtubule inhibitor  </strong>
+                  <br><br>
+                  <p>For use on the face and scalp, this medicatoin is applied topically to stablizes the damage skin and clear the lesions. You should avoid getting it near your eyes.
+
+</p>
+
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="bcc" class="bg-cus">
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: white">Basal Cell Carcinoma</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p>Basal cell carcinoma is a cancer that grows on parts of your skin that get a lot of sun. It's natural to feel worried when your doctor tells you that you have it, but keep in mind that it's the least risky type of skin cancer. As long as you catch it early, you can be cured.</p>
+          <p>This cancer is unlikely to spread from your skin to other parts of your body, but it can move nearby into bone or other tissue under your skin. Several treatments can keep that from happening and get rid of the cancer.</p>
+          <p>The tumors start off as small shiny bumps, usually on your nose or other parts of your face. But you can get them on any part of your body, including your trunk, legs, and arms. If you've got fair skin, you're more likely to get this skin cancer.
+</p>
+          <p>Basal cell carcinoma usually grows very slowly and often doesn't show up for many years after intense or long-term exposure to the sun. You can get it at a younger age if you're exposed to a lot of sun or use tanning beds.
+</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+          <p>Basal cell carcinoma can look different. You may notice a skin growth in a dome shape that has blood vessels in it. It can be pink, brown, or black.</p>
+          <p>At first, a basal cell carcinoma comes up like a small "pearly" bump that looks like a flesh-colored mole or a pimple that doesn’t go away. Sometimes these growths can look dark. Or you may also see shiny pink or red patches that are slightly scaly.</p>
+          <p>Another symptom to watch out for is a waxy, hard skin growth.</p>
+          <p>Basal cell carcinomas are also fragile and can bleed easily.</p>
+
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+         <p>Ultraviolet (UV) rays from the sun or from a tanning bed are the main cause of basal cell carcinoma.
+             When UV rays hit your skin, over time, they can damage the DNA in your skin cells. The DNA holds the code for the way these cells grow. Over time, damage to the DNA can cause cancer to form. The process takes many years.</p>
+
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+
+          <p>Factors that increase your risk of basal cell carcinoma include:
+</p>
+          <ul>
+              <li><strong>Chronic sun exposure :</strong> A lot of time spent in the sun — or in commercial tanning beds — increases the risk of basal cell carcinoma. The threat is greater if you live in a sunny or high-altitude location, both of which expose you to more UV radiation. Severe sunburns also increase your risk.</li>
+              <li><strong>Radiation therapy :</strong> Radiation therapy to treat acne or other skin conditions may increase the risk of basal cell carcinoma at previous treatment sites on the skin.</li>
+
+              <li><strong>Fair skin :</strong> The risk of basal cell carcinoma is higher among people who freckle or burn easily or who have very light skin, red or blond hair, or light-colored eyes.
+</li>
+
+              <li><strong>Increasing age :</strong>  Because basal cell carcinoma often takes decades to develop, the majority of basal cell carcinomas occur in older adults. But it can also affect younger adults and is becoming more common in people in their 20s and 30s.
+</li>
+
+              <li><strong>A personal or family history of skin cancer :</strong>If you've had basal cell carcinoma one or more times, you have a good chance of developing it again. If you have a family history of skin cancer, you may have an increased risk of developing basal cell carcinoma.</li>
+
+              <li><strong>Immune-suppressing drugs :</strong> Taking medications that suppress your immune system, such as anti-rejection drugs used after transplant surgery, significantly increases your risk of skin cancer.
+</li>
+
+              <li><strong>Exposure to arsenic :</strong> Arsenic, a toxic metal that's found widely in the environment, increases the risk of basal cell carcinoma and other cancers. Everyone has some arsenic exposure because it occurs naturally. But some people may have higher exposure if they drink contaminated well water or have a job that involves producing or using arsenic.
+</li>
+
+              <li><strong>Inherited syndromes that cause skin cancer :</strong> Certain rare genetic diseases can increase the risk of basal cell carcinoma, including nevoid basal cell carcinoma syndrome (Gorlin-Goltz syndrome) and xeroderma pigmentosum.</li>
+          </ul>
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>Complications of basal cell carcinoma can include:
+</p>
+<ul>
+    <li>
+        <p>A risk of recurrence. Basal cell carcinomas commonly recur, even after successful treatment.</p></li>
+
+    <li>
+        <p>An increased risk of other types of skin cancer. A history of basal cell carcinoma may also increase the chance of developing other types of skin cancer, such as squamous cell carcinoma.
+</p></li>
+
+    <li>
+        <p>Cancer that spreads beyond the skin. Very rarely, basal cell carcinoma can spread (metastasize) to nearby lymph nodes and other areas of the body, such as the bones and lungs.
+</p></li>
+
+</ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>In order to assess any growths or changes in your skin, your doctor or a specialist in skin conditions will conduct a medical history and exam. Your doctor will examine not only the suspicious area on your skin but also the rest of your body for other lesions.
+Your doctor may do a skin biopsy, which involves removing a small sample of a lesion for testing in a laboratory. This will reveal whether you have skin cancer and, if so, what type of skin cancer. The type of skin biopsy you undergo will depend on the type and size of the lesion.
+</p>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+
+          <p> The goal is to get rid of the cancer while leaving as small a scar as possible. To choose the best treatment, your doctor will consider the size and place of the cancer, and how long you've had it. They'll also take into account the chance of scarring, as well as your overall health.</p>
+          <p>These are some of the treatment options your doctor may suggest:</p>
+          <ul>
+              <li><strong>Cutting out the tumor : </strong> Your doctor may call this an "excision." First they'll numb the tumor and the skin around it. Then they'll scrape the tumor with a spoon-shaped device. Next they'll cut out the tumor and a small surrounding area of normal-appearing skin and send it to a lab.
+                  If the lab results show there are cancer cells in the area around your tumor, your doctor may need to remove more of your skin.</li>
+              <li><strong>Scraping the tumor away and using electricity to kill cancer cells : </strong> You may hear your doctor call this "curettage and desiccation."First your doctor numbs your skin. Then they use a curette, a tool that has a spoon-like shape to scrape off the tumor. Your doctor controls your bleeding and kills any other cancer cells with an electric needle.</li>
+              <li><strong>Freezing your cancer cells : </strong> This is known as "cryosurgery." Your doctor kills your cancer cells by freezing them with liquid nitrogen.</li>
+              <li><strong>Radiation therapy :  </strong>This treatment uses X-rays to destroy your cancer cells. It's done over several weeks.</li>
+              <li><strong>Mohs surgery : </strong> <p>This is a technique that's named after the doctor who invented it. Your surgeon removes your tumor layer by layer. They take out some tissue, then look at it under a microscope to see if it has cancer cells, before moving on to the next layer.</p>
+
+<p>Your doctor may recommend this surgery if your tumor is:</p>
+                  <ul>
+<li>Large
+                      <li>n a sensitive area of your body            </li>
+                      <li>Has been there for a long time              </li>
+                      <li>Came back after you had other treatments    </li>
+                  </ul></li>
+
+                      <li> <strong>Creams and pills.                           </strong>
+                          <p> Your doctor may suggest some medicine that can treat your basal cell carcinoma. Two creams that you put on your skin are:</p>
+                          <ul>
+                              <li>fluorouracil (5-FU) </li>
+                              <li>imiquimod      </li>
+                          </ul>
+                          <p>You may need to apply these creams for several weeks. Your doctor will check you regularly to see how well they are working.</p>
+                          <p>There is also a pill that your doctor might prescribe called sonidegib (Odomzo) or vismodegib (Erivedge). You're most likely to get one of these drugs if your basal cell carcinoma has spread to other parts of your body. Other treatments include laser surgery or photodynamic therapy.</p>
+                      </li>
+          </ul>
+
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="bk" class="bg-light">
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: rgb(13, 75, 63);">Benign Keratosis</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p>A seborrheic keratosis is a common, harmless growth on your skin. Doctors call it “benign,” which means it doesn’t cause cancer. It can appear later in life, after about age 40. It’s most likely to happen on your face, scalp, chest, shoulders, abdomen, or back. It can show up anywhere except the palms and soles.</p>
+          <p>Often, your doctor can tell what a seborrheic keratosis is just by looking at it. If you’re worried that it could be cancer, or your doctor isn’t sure, they’ll remove the growth and study it more closely.</p>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+          <p>A seborrheic keratosis grows gradually. Signs and symptoms might include:
+</p>
+          <ul>
+              <li>A round or oval-shaped waxy or rough bump, typically on the face, chest, a shoulder or the back                                                                       </li>
+              <li>A flat growth or a slightly raised bump with a scaly surface, with a characteristic "pasted on" look                                                                  </li>
+              <li>Varied size, from very small to more than 1 inch (2.5 centimeters) across                                                                                             </li>
+              <li>Varied number, ranging from a single growth to multiple growths                                                                                                       </li>
+              <li>Very small growths clustered around the eyes or elsewhere on the face, sometimes called flesh moles or dermatosis papulosa nigra, common on Black or brown skin       </li>
+              <li>Varied in color, ranging from light tan to brown or black                                                                                                             </li>
+          <li>Itchiness      </li>
+
+          </ul>
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+         <p> Experts don't completely understand what causes a seborrheic keratosis. This type of skin growth does tend to run in families, so there is likely an inherited tendency. If you've had one seborrheic keratosis, you're at risk of developing others.
+             A seborrheic keratosis isn't contagious or cancerous.</p>
+
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+          <p>The peak time for developing seborrheic keratoses is after your 50s. You're also more likely to have them if you have a family history of the condition.
+</p>
+
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>These complications may occur:
+</p>
+          <ul>
+              <li>Irritation, bleeding, or discomfort of growths</li>
+              <li>Mistake in diagnosis (growths may look like skin cancer tumors)</li>
+
+          </ul>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>Your doctor can usually tell whether you have a seborrheic keratosis by looking at the affected skin. If there is a question about the diagnosis, your doctor might recommend removing the growth so that it can be examined under a microscope.</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+          <p>A seborrheic keratosis typically doesn't go away on its own, but treatment isn't needed. You might choose to have it removed if it becomes irritated or bleeds, or if you don't like how it looks or feels.</p>
+          <p>Seborrheic keratosis removal can be achieved with one or a combination of the following methods:
+</p>
+          <ul>
+              <li><strong>Freezing the growth : </strong>
+                  <br><br>
+                  <p>Freezing a growth with liquid nitrogen (cryotherapy) can be an effective way to remove a seborrheic keratosis. It doesn't always work on raised, thicker growths. This method carries the risk of permanent loss of pigment, especially on Black or brown skin.
+</p>
+              </li>
+              <li><strong>Scraping (curettage) or shaving the skin's surface : </strong>
+                  <br><br>
+              <p> First your doctor will numb the area and then use a scalpel blade to remove the growth. Sometimes shaving or scraping is used along with cryosurgery to treat thinner or flat growths.</p>
+
+              </li>
+              <li><strong>Electrocautery : </strong>
+                  <br><br>
+                  <p>First your doctor will numb the area and then destroy the growth with electrocautery. This method can be used alone or with scraping, especially when removing thicker growths.</p>
+              </li>
+
+          </ul>
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="df" class="bg-cus">
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: white;">DERMATOFIBROMA</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p> Dermatofibromas are harmless growths within the skin that usually have a small diameter. They can vary in color but are typically pink to light brown in light skin and dark brown or black in dark skin. They may appear more pink or darker if a person accidentally irritates them — for example, when shaving.</p>
+          <p>As they are dense and firm to the touch, many people say that they feel like a small stone underneath or raised above the skin. Most dermatofibromas are painless, but some people experience itching, irritation, or tenderness at the site of the growth.</p>
+          <p>Some doctors or medical researchers may to dermatofibromas as benign fibrous histiocytomas.</p>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+
+          <p>The symptoms of dermatofibromas include:                                                        </p>
+          <ul>
+              <li>A red, brown, or purple growth that can change colors over time           </li>
+              <li>A growth that is as small as a BB pellet                                  </li>
+              <li>Tenderness, pain, and itching; however, growths are usually painless </li>
+          <li>A dimple that appears when the growth is pinched                          </li>
+
+          </ul>
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+          <p>Dermatofibromas are an accumulation of extra cells within the deeper layers of the skin. Medical researchers do not know the exact cause of these growths. theorize that a possible cause is an adverse reaction to a local trauma, such as a small injury or bug bite in the area where the lesion later forms.</p>
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+
+          <p>Risk factors include:</p>
+          <p>Age may be another risk factor, as the growths appear mostly in adults. People with a suppressed immune system may also be more likely to experience dermatofibromas and to have more than one growth.</p>
+          <p>Multiple dermatofibromas are also more common in people with underlying conditions, especially in those with systemic lupus erythematosus. In some cases, there may not be an obvious cause.</p>
+
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>Complications of dermatofibroma are primarily related to surgical removal, including bleeding, infection, scar/disfigurement
+However, if a person has a growth that looks like a dermatofibroma but is rapidly growing or changing, they should seek medical advice. This growth may be a sign of a rare type of cancer called dermatofibrosarcoma protuberans.
+</p>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>Primary care doctors and dermatologists will usually diagnose a dermatofibroma by inspecting it visually. The papules are easy to identify, but doctors will also want to be certain that they do not misdiagnose the growth.
+</p>
+          <p>
+              In addition to asking a person questions about their symptoms and examining the area, a doctor is likely to perform the following :
+
+          </p>
+<ul>
+    <li><strong>Pinch test:</strong>
+        <p>The doctor may pinch the surrounding skin to check for the characteristic dimple.</p></li>
+
+<li><strong>Dermatoscope:</strong>
+    <p>The doctor may use this device to take a magnified look at the surface of the growth. Dermatofibromas will usually have a central white area in the middle with a pigmented area surrounding it.</p>
+
+</li>
+
+    <li><strong>Collecting and testing a sample of abnormal tissue (biopsy)</strong>
+        <p>If the growth is bleeding, abnormally shaped, or irritated, or it has a sore on top of it, doctors may want to do a biopsy. This procedure involves taking a small bit of the tissue from the papule to examine under a microscope in a laboratory.
+</p>
+
+    </li>
+</ul>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+          <p>In most cases, there is no need to treat dermatofibromas. However, the growths can be removed surgically or can be flattened by being frozen with liquid nitrogen..</p>
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="nv" class="bg-light">
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: rgb(13, 75, 63);">MELANOCYTIC NEVUS</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p>Melanocytic nevi are a common type of skin growth. They often appear as small, dark brown spots and are caused by clusters of pigment-forming cells (melanocytes). Most people have 10 to 40 moles that appear during childhood and adolescence and may change in appearance or fade over time.</p>
+          <p>Most moles are harmless. Rarely, they become cancerous. Being aware of changes in your moles and other pigmented patches is important to detecting skin cancer, especially malignant melanoma.</p>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+
+          <p>General signs and symptoms  may include:                                                           </p>
+          <ul>
+              <li><strong>Color and texture : </strong> Melanocytic nevi (moles)  can be brown, tan, black, blue, red or pink. They can be smooth, wrinkled, flat or raised. They may have hair growing from them.</li>
+              <li><strong>Shape : </strong> Most moles are oval or round.</li>
+              <li><strong>Size : </strong> Moles are usually less than 1/4 inch (about 6 millimeters) in diameter — the size of a pencil eraser. Those present at birth (congenital nevi) can be bigger than usual, covering part of the face, torso or a limb.</li>
+
+          </ul>
+          <p>Moles can develop anywhere on your body, including your scalp, armpits, under your nails, and between your fingers and toes. Most people have 10 to 40 moles. Many of these develop by age 50. Moles may change or fade away over time. With hormonal changes in adolescence and pregnancy, they may become darker and larger.</p>
+          <p>Clusters of brown spots around the eyes, cheeks and nose are sometimes called flesh moles, but they are actually dermatoses papulosa nigra — a type of seborrheic keratosis, not clusters of pigment-forming cells (nevi). Dermatoses papulosa nigra are more common among Black women. Flesh moles don't carry a risk of melanoma, but they can be treated if you consider them a cosmetic concern.</p>
+
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+         <p>Moles are caused when cells in the skin called melanocytes grow in clusters. Melanocytes are generally distributed throughout the skin. They produce melanin, the natural pigment that gives skin its color.
+         </p>
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+
+          <p> Risk factors for melanocytic nevi are the following:</p>
+         <ul>
+             <li>Exposure to ultraviolet (UV) rays.                                                                                                             </li>
+             <li>Genetic factors such as Dysplastic nevus syndrome (also known as familial atypical multiple mole melanoma syndrome, or FAMMM.                  </li>
+             <li>Fair skin, freckling, and light hair.                                                                                                          </li>
+             <li>Family history of melanoma.                                                                                                                    </li>
+             <li>Personal history of melanoma or other skin cancers.                                                                                            </li>
+             <li>Having a weakened immune system.                                                                                                               </li>
+             <li>Old age                                                                                                                                        </li>
+             <li>Male gender                                                                                                                                    </li>
+
+         </ul>
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>Melanoma is the main complication of moles. Some people have higher-than-average risk of their moles becoming cancerous and developing into melanoma.</p>
+
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>Your doctor can diagnose moles by looking at your skin. During a skin exam, your doctor inspects your skin from head to toe. If your doctor suspects that a mole may be cancerous, it is removed and sent to a lab for examination under a microscope (biopsy).
+You might choose to make a skin exam a regular part of your preventive medical care. Talk with your doctor about a schedule that's appropriate for you.
+</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+          <p>Most moles don't need treatment. If you're self-conscious about a mole, you could try makeup to help conceal it. If you have a hair growing from a mole, you might try clipping it close to the skin's surface or plucking it. Anytime you cut or irritate a mole, keep the area clean. See your doctor if the mole doesn't heal.</p>
+          <p>You might also talk with your dermatologist about surgically removing a mole if it bothers you or if you notice suspicious changes in it. Mole removal takes only a short time and is usually done on an outpatient basis. Your doctor numbs the area around the mole and cuts it out, along with a margin of healthy skin if necessary. The procedure may leave a permanent scar.</p><p> People with Black skin are at increased risk of other surgical side effects, such as pigmentary changes at the incision site and keloid scars.
+</p>
+
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="mel" class="bg-cus">
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: white;">Brain Tumor</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p>Melanoma, the most serious type of skin cancer, develops in the cells (melanocytes) that produce melanin — the pigment that gives your skin its color. Melanoma can also form in your eyes and, rarely, inside your body, such as in your nose or throat.</p>
+          <p>The exact cause of all melanomas isn't clear, but exposure to ultraviolet (UV) radiation from sunlight or tanning lamps and beds increases your risk of developing melanoma. Limiting your exposure to UV radiation can help reduce your risk of melanoma.</p>
+          <p>The risk of melanoma seems to be increasing in people under 40, especially women. Knowing the warning signs of skin cancer can help ensure that cancerous changes are detected and treated before the cancer has spread. Melanoma can be treated successfully if it is detected early.</p>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+          <p>Melanomas can develop anywhere on your body. They most often develop in areas that have had exposure to the sun, such as your back, legs, arms and face.</p>
+          <p>Melanomas can also occur in areas that don't receive much sun exposure, such as the soles of your feet, palms of your hands and fingernail beds. These hidden melanomas are more common in people with darker skin.</p>
+          <p>The first melanoma signs and symptoms often are:</p>
+          <ul>
+              <li>A change in an existing mole</li>
+              <li>The development of a new pigmented or unusual-looking growth on your skin</li>
+          </ul>
+          <p> Melanoma doesn't always begin as a mole. It can also occur on otherwise normal-appearing skin.</p>
+
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+          <p>Melanoma occurs when something goes wrong in the melanin-producing cells (melanocytes) that give color to your skin.</p>
+          <p>Normally, skin cells develop in a controlled and orderly way — healthy new cells push older cells toward your skin's surface, where they die and eventually fall off. But when some cells develop DNA damage, new cells may begin to grow out of control and can eventually form a mass of cancerous cells.</p>
+          <p>Just what damages DNA in skin cells and how this leads to melanoma isn't clear. It's likely that a combination of factors, including environmental and genetic factors, causes melanoma. Still, doctors believe exposure to ultraviolet (UV) radiation from the sun and from tanning lamps and beds is the leading cause of melanoma.</p>
+          <p>UV light doesn't cause all melanomas, especially those that occur in places on your body that don't receive exposure to sunlight. This indicates that other factors may contribute to your risk of melanoma.</p>
+
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+
+          <p>Risk factors include:</p>
+          <ul>
+              <li><strong>Fair Skin:</strong> Having less pigment (melanin) in your skin means you have less protection from damaging UV radiation. If you have blond or red hair, light-colored eyes, and freckle or sunburn easily, you're more likely to develop melanoma than is someone with a darker complexion. But melanoma can develop in people with darker complexions, including Hispanic people and black people.
+</li>
+              <li><strong>A history of sunburn :</strong>  One or more severe, blistering sunburns can increase your risk of melanoma.</li>
+
+              <li><strong>Excessive ultraviolet (UV) light exposure :</strong>  Exposure to UV radiation, which comes from the sun and from tanning lights and beds, can increase the risk of skin cancer, including melanoma.</li>
+
+              <li><strong>Living closer to the equator or at a higher elevation :</strong>  People living closer to the earth's equator, where the sun's rays are more direct, experience higher amounts of UV radiation than do those living farther north or south. In addition, if you live at a high elevation, you're exposed to more UV radiation.</li>
+
+              <li><strong>Having many moles or unusual moles :</strong>  Having more than 50 ordinary moles on your body indicates an increased risk of melanoma. Also, having an unusual type of mole increases the risk of melanoma. Known medically as dysplastic nevi, these tend to be larger than normal moles and have irregular borders and a mixture of colors.</li>
+
+              <li><strong>A family history of melanoma :</strong>  If a close relative — such as a parent, child or sibling — has had melanoma, you have a greater chance of developing a melanoma, too.</li>
+
+              <li><strong>Weakened immune system:</strong>  People with weakened immune systems have an increased risk of melanoma and other skin cancers. Your immune system may be impaired if you take medicine to suppress the immune system, such as after an organ transplant, or if you have a disease that impairs the immune system, such as AIDS.
+</li>
+
+          </ul>
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>Most severe complications occur in cases of delayed diagnosis and treatment. Complications can include:</p>
+<ul>
+    <li><strong>Secondary infection - </strong> resulting from disruption of the normal skin barrier.                                                      </li>
+    <li><strong>Scarring - </strong>these can result from the lesion itself or treatments.                                                                </li>
+    <li><strong>Lymphedema - </strong>most commonly occurs secondary to the removal of lymph nodes but can result from cancer alone.                      </li>
+    <li><strong>Local recurrence - </strong>especially in cases that were more advanced before diagnosis.                                                 </li>
+    <li><strong>Metastases - </strong> more common with advanced cases, and melanomas and squamous cell carcinomas                                         </li>
+    <li><strong>Depression and anxiety - </strong>because of cosmesis issues.                                                                             </li>
+
+</ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>Tests and procedures used to diagnose melanoma include:</p>
+<ul>
+    <li><strong>Physical exam</strong>
+        <p>Your doctor will ask questions about your health history and examine your skin to look for signs that may indicate melanoma.</p></li>
+
+<li><strong>Biopsy </strong>
+    <p>To determine whether a suspicious skin lesion is melanoma, your doctor may recommend removing a sample of skin for testing. The sample is sent to a lab for examination.
+What type of biopsy procedure your doctor recommends will depend on your particular situation. Most often doctors recommend removing the entire growth when possible. One common technique, the punch biopsy, is done with a circular blade that's pressed into the skin around the suspicious mole. Another technique, called an excisional biopsy, uses a scalpel to cut away the entire mole and a small margin of healthy tissue around it.
+</p>
+
+</li>
+
+
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+          <p>TTreatment for early-stage melanomas usually includes surgery to remove the melanoma. A very thin melanoma may be removed entirely during the biopsy and require no further treatment. Otherwise, your surgeon will remove the cancer as well as a border of normal skin and a layer of tissue beneath the skin. For people with early-stage melanomas, this may be the only treatment needed.</p>
+          <p>If melanoma has spread beyond the skin, treatment options may include:</p>
+          <ul>
+              <li><strong>Surgery</strong>
+                  <br><br>
+                  <p>Surgery to remove affected lymph nodes. If melanoma has spread to nearby lymph nodes, your surgeon may remove the affected nodes. Additional treatments before or after surgery also may be recommended.</p>
+
+              </li>
+              <li><strong>Radiation therapy</strong>
+                  <br><br>
+              <p> This treatment uses high-powered energy beams, such as X-rays and protons, to kill cancer cells. Radiation therapy may be directed to the lymph nodes if the melanoma has spread there. Radiation therapy can also be used to treat melanomas that can't be removed completely with surgery.
+For melanoma that spreads to other areas of the body, radiation therapy can help relieve symptoms.</p>
+
+
+              </li>
+              <li><strong>Immunotherapy</strong>
+                  <br><br>
+              <p>Immunotherapy is a drug treatment that helps your immune system to fight cancer. Your body's disease-fighting immune system might not attack cancer because the cancer cells produce proteins that help them hide from the immune system cells. Immunotherapy works by interfering with that process.
+                  Immunotherapy is often recommended after surgery for melanoma that has spread to the lymph nodes or to other areas of the body. When melanoma can't be removed completely with surgery, immunotherapy treatments might be injected directly into the melanoma.</p>
+
+                   </li>
+
+              <li><strong>Chemotherapy</strong>
+                  <br><br>
+                  <p>Chemotherapy uses drugs to kill cancer cells. Chemotherapy can be given intravenously, in pill form or both so that it travels throughout your body.
+Chemotherapy can also be given in a vein in your arm or leg in a procedure called isolated limb perfusion. During this procedure, blood in your arm or leg isn't allowed to travel to other areas of your body for a short time so that the chemotherapy drugs travel directly to the area around the melanoma and don't affect other parts of your body.
+</p>
+
+              </li>
+
+              <li><strong>Targeted drug therapy     </strong>
+                  <br><br>
+                  <p>Targeted drug treatments focus on specific weaknesses present within cancer cells. By targeting these weaknesses, targeted drug treatments can cause cancer cells to die. Cells from your melanoma may be tested to see if targeted therapy is likely to be effective against your cancer.
+For melanoma, targeted therapy might be recommended if the cancer has spread to your lymph nodes or to other areas of your body.
+         </p>
+
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="scc" class="bg-light">
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: rgb(13, 75, 63);">SQUAMOUS CELL CARCINOMA
+</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p>Squamous cell carcinoma of the skin is a common form of skin cancer that develops in the squamous cells that make up the middle and outer layers of the skin.</p>
+<p>Squamous cell carcinoma of the skin is usually not life-threatening, though it can be aggressive. Untreated, squamous cell carcinoma of the skin can grow large or spread to other parts of your body, causing serious complications.
+    Most squamous cell carcinomas of the skin result from prolonged exposure to ultraviolet (UV) radiation, either from sunlight or from tanning beds or lamps. Avoiding UV light helps reduce your risk of squamous cell carcinoma of the skin and other forms of skin cancer.</p>
+<p>Squamous cells are found in many places in your body, and squamous cell carcinoma can occur anywhere squamous cells are found. Squamous cell carcinoma of the skin refers to cancer that forms in the squamous cells found in the skin.
+
+</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+          <p>Squamous cell carcinoma of the skin most often occurs on sun-exposed skin, such as your scalp, the backs of your hands, your ears or your lips. But it can occur anywhere on your body, including inside your mouth, the bottoms of your feet and on your genitals.</p>
+          <p>Signs and symptoms of squamous cell carcinoma of the skin include:                                                          </p>
+          <ul>
+              <li>A firm, red nodule                                                                           </li>
+              <li>A flat sore with a scaly crust                                                               </li>
+              <li>A new sore or raised area on an old scar or ulcer                                            </li>
+              <li>A rough, scaly patch on your lip that may evolve to an open sore                             </li>
+              <li>A red sore or rough patch inside your mouth                                                  </li>
+              <li>A red, raised patch or wartlike sore on or in the anus or on your genitals                   </li>
+
+          </ul>
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+          <p>Squamous cell carcinoma of the skin occurs when the flat, thin squamous cells in the middle and outer layers of your skin develop changes (mutations) in their DNA. A cell's DNA contains the instructions that tell a cell what to do. The mutations tell the squamous cells to grow out of control and to continue living when normal cells would die.</p>
+          <p>Most of the DNA mutations in skin cells are caused by ultraviolet (UV) radiation found in sunlight and in commercial tanning lamps and tanning beds.</p>
+          <p>But sun exposure doesn't explain skin cancers that develop on skin not ordinarily exposed to sunlight. This indicates that other factors may contribute to your risk of skin cancer, such as having a condition that weakens your immune system.</p>
+
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+          <p>In most people with primary brain tumors, the cause of the tumor isn't clear. But doctors have identified some factors that may increase your risk of a brain tumor.</p>
+          <p>Risk factors include:</p>
+          <ul>
+              <li><strong>Radiation exposure:</strong> People who have been exposed to a type of radiation called ionizing radiation have an increased risk of brain tumors. Examples of ionizing radiation include radiation therapy used to treat cancer and radiation exposure caused by atomic bombs.</li>
+              <li><strong>Family history of brain tumors:</strong> A small portion of brain tumors occurs in people with a family history of brain tumors or a family history of genetic syndromes that increase the risk of brain tumors.</li>
+          </ul>
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>Your brain is in charge of everything your body does, including vision, hearing, speech, and movement. As brain cancer grows, it presses on and damages areas that control these things. That can lead to complications like headaches, seizures, vision and hearing loss, and balance issues. Your doctor will help you manage these problems while you get treatments for your cancer.</p>
+<ul>
+    <li><strong>Fatigue</strong>
+        <p>A lot of people with brain cancer deal with this. You feel exhausted because your body uses a lot of energy to fight off the tumor. Cancer-related fatigue isn't normal tiredness. It wipes you out. Cancer also makes it harder for you to sleep soundly. Even when you can sleep, it doesn't always relieve the weariness. To curb fatigue, break up tasks into small chunks and take rest breaks during the day.</p></li>
+
+    <li><strong>Headaches</strong>
+        <p>About half of people with brain cancer get headaches. The tumor itself doesn't cause pain. But as it grows, it can press on sensitive nerves and blood vessels in the brain. Headaches can last for several hours. They can feel dull, aching, pounding, or throbbing. They’re often worse in the morning or can flare up when you cough or exercise. Your doctor can prescribe medicine to help control the pain.</p></li>
+
+    <li><strong>Nausea and Vomiting</strong>
+        <p>A tumor can make you sick to your stomach if it presses on certain areas of your brain. Cancer treatments like radiation and chemotherapy also cause nausea and vomiting. "Anti-emetic" medicines relieve nausea. They come in a liquid, tablet, and capsule -- or as a suppository if you're too sick to swallow medicine. Call your doctor if you can't keep down any foods or fluids, or if you've been throwing up for more than 24 hours.</p></li>
+
+    <li><strong>Speech and Language Problems</strong>
+        <p>Cancer can affect parts of your brain that help you speak and process language. You might struggle to find the right words, or mix up words when you describe objects ("chair" instead of "table,” for instance). It can also be harder to understand what other people say or to follow a conversation. Language problems can be frustrating. Relax and slow down when you speak. A speech and language therapist can also help with communication.</p></li>
+    <li><strong>Vision Problems</strong>
+        <p>A brain area called the occipital lobe processes the images your eyes see. A tumor in this part of the brain could affect your vision. Blurred vision, double vision, and floating spots can all be signs of a brain tumor. Your sight might go gray when you stand up or change position quickly. If you have these symptoms, see your doctor for a vision test. Surgery and other treatments that shrink the tumor can improve vision problems.</p></li>
+
+    <li><strong>Hearing Loss</strong>
+<p>A tumor can put pressure on the nerves in your inner ear that move sound from your ear to your brain. Depending on where the tumor is, you might first lose the ability to hear high-pitched or low-pitched sounds. Ringing in the ears is also common. The hearing loss can come on slowly, and it might only be in one ear. See your doctor for a hearing test and treatment options.
+</p></li>
+    <li><strong>Balance Issues</strong>
+        <p>The cerebellum, an area in the lower part of your brain, controls your coordination and balance. This region helps keep you steady on your feet. A tumor in the cerebellum can throw off your balance and cause you to stumble or drop things. If you have balance problems, see a physical therapist. You might need a walker or cane to help you get around safely. Wear shoes with non-skid soles, and avoid walking on uneven or slippery surfaces.</p></li>
+
+    <li><strong>Personality and Mood Changes</strong>
+<p>More than half of people with brain cancer have personality or mood changes. It's common to feel more angry, withdrawn, anxious, or irritable than usual. Some of these changes may be part of your response to your cancer diagnosis and treatment. Others start when the tumor grows into areas of your brain that control mood and emotion. Talk with your doctor or a mental health specialist. Therapy can help you manage what you're going through.
+</p></li>
+    <li><strong>Deep Vein Thrombosis (DVT)</strong>
+<p>Tumors release chemicals that make your body more likely to form blood clots. Nearly 1 in 5 people with brain tumors get deep vein thrombosis (DVT), a clot in a deep vein in the leg. If the clot moves into your lungs (pulmonary embolism), it could be life-threatening. See a doctor if you have swelling, redness, and tenderness in your leg. Taking blood thinners will stop the clot from getting bigger and prevent new clots from forming.
+</p></li>
+    <li><strong>Memory Loss</strong>
+<p>If you're more forgetful, it could be due to both your cancer and its treatments. Tumors can harm short-term and long-term memory, depending on their location. Chemotherapy and other treatments affect concentration and leave you mentally foggy. You may hear it called "chemo brain." Use a notebook, daily planner, and smartphone apps to remind you. An occupational therapist can show you how to make work and home tasks easier.
+</p></li>
+    <li><strong>Seizures</strong>
+<p>About 60% of people with brain cancer get seizures, which are sudden bursts of abnormal electrical activity in the brain. Tumors may trigger them by changing brain cells or chemicals in a way that makes nerve cells fire too often. During a seizure, some people shake. Others stare off into space. Anti-seizure medicines can help. Also, avoid triggers, like loud noises or too little sleep.
+</p></li>
+    <li><strong>Numbness and Weakness</strong>
+<p>A brain area called the parietal lobe helps you process the sensation of touch. A tumor in this part of your brain can cause numbness or a tingling sensation that feels like pins and needles. Often the numbness affects only one side of your body, such as one arm or leg. One side of your body might also be weaker than the other. Tell your doctor about these symptoms.
+</p></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>If it's suspected that you have a brain tumor, your doctor may recommend several tests and procedures, including:</p>
+<ul>
+    <li><strong>A neurological exam </strong>
+        <p>A neurological exam may include, among other things, checking your vision, hearing, balance, coordination, strength, and reflexes. Difficulty in one or more areas may provide clues about the part of your brain that could be affected by a brain tumor.</p></li>
+
+<li><strong>Imaging tests </strong>
+    <p><strong>Magnetic resonance imaging (MRI)</strong> is commonly used to help diagnose brain tumors. Sometimes a dye is injected through a vein in your arm during your MRI study.</p>
+
+    <p>Several specialized MRI scan components — including functional MRI, perfusion MRI and magnetic resonance spectroscopy — may help your doctor evaluate the tumor and plan treatment.</p>
+
+    <p>Sometimes other imaging tests are recommended in certain situations, including <strong>computerized tomography (CT)</strong> and <strong>positron emission tomography (PET)</strong>.</p>
+</li>
+
+    <li><strong>Collecting and testing a sample of abnormal tissue (biopsy)</strong>
+        <p>A biopsy can be performed as part of an operation to remove the brain tumor, or a biopsy can be performed using a needle.</p>
+
+        <p>A <strong>stereotactic needle biopsy</strong> may be done for brain tumors in hard-to-reach areas or very sensitive areas within your brain that might be damaged by a more extensive operation. Your neurosurgeon drills a small hole into your skull. A thin needle is then inserted through the hole. Tissue is removed using the needle, which is frequently guided by CT or MRI scanning.</p>
+
+        <p>The biopsy sample is then viewed under a microscope to determine if it's cancerous or benign. Sophisticated laboratory tests can give your doctor clues about your prognosis and your treatment options. Studying your biopsy sample and determining exactly which type of brain tumor you have is a complex process. </p>
+    </li>
+</ul>
+          <p>If you're uncertain about your diagnosis, consider seeking a second opinion at a medical center where many brain biopsies are evaluated every year.</p>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+          <p>Treatment for a brain tumor depends on the type, size, and location of the tumor, as well as your overall health and your preferences.</p>
+          <ul>
+              <li><strong>Surgery</strong>
+                  <br><br>
+                  <p>If the brain tumor is located in a place that makes it accessible for an operation, your surgeon will work to remove as much of the brain tumor as can be done safely.</p>
+
+                  <p>Some brain tumors are small and easy to separate from surrounding brain tissue, which makes complete surgical removal possible. Other brain tumors can't be separated from surrounding tissue or they're located near sensitive areas in your brain, making surgery risky. In these situations, your doctor removes as much of the tumor as is safe.                            </p>
+
+                  <p>Even removing a portion of the brain tumor may help reduce your signs and symptoms.         </p>
+
+                  <p>Surgery to remove a brain tumor carries risks, such as infection and bleeding. Other risks may depend on the part of your brain where your tumor is located. For instance, surgery on a tumor near nerves that connect to your eyes may carry a risk of vision loss.                                                                                         </p>
+              </li>
+              <li><strong>Radiation therapy</strong>
+                  <br><br>
+              <p>Radiation therapy uses high-energy beams, such as X-rays or protons, to kill tumor cells. Radiation therapy can come from a machine outside your body (external beam radiation), or, very rarely, radiation can be placed inside your body close to your brain tumor (brachytherapy). </p>
+
+              <p><strong>External beam radiation </strong>can focus just on the area of your brain where the tumor is located, or it can be applied to your entire brain (whole-brain radiation). Whole-brain radiation is most often used to treat cancer that spreads to the brain from some other part of the body and forms multiple tumors in the brain.  </p>
+
+              <p>Traditionally, radiation therapy uses X-rays, but a newer form of this treatment uses proton beams. <strong>Proton beam therapy</strong> allows doctors to control the radiation more precisely. It may help treat brain tumors in children and tumors that are very close to sensitive areas of the brain. Proton beam therapy isn't as widely available as traditional X-ray radiation therapy.</p>
+
+                <p>Side effects of radiation therapy depend on the type and dose of radiation you receive. Common side effects during or immediately following radiation include fatigue, headaches, memory loss, scalp irritation, and hair loss.</p>
+              </li>
+              <li><strong>Radiosurgery </strong>
+                  <br><br>
+              <p><strong>Stereotactic radiosurgery</strong>, which uses small gamma rays to deliver a precise dose of radiation to the target.Stereotactic radiosurgery is not a form of surgery in the traditional sense. Instead, radiosurgery uses multiple beams of radiation to give a highly focused form of radiation treatment to kill the tumor cells in a very small area. Each beam of radiation isn't particularly powerful, but the point where all the beams meet — at the brain tumor — receives a very large dose of radiation to kill the tumor cells.    </p>
+
+                  <p>There are different types of technology used in radiosurgery to deliver radiation to treat brain tumors, such as a Gamma Knife or linear accelerator. </p>
+
+                  <p>Radiosurgery is typically done in one treatment, and usually, you can go home the same day.       </p> </li>
+
+              <li><strong>Chemotherapy</strong>
+                  <br><br>
+                  <p><strong>Chemotherapy</strong> uses drugs to kill tumor cells. Chemotherapy drugs can be taken orally in pill form or injected into a vein (intravenously). The chemotherapy drug used most often to treat brain tumors is temozolomide (Temodar). Other chemotherapy drugs may be recommended depending on the type of cancer.  </p>
+
+                  <p>Chemotherapy side effects depend on the type and dose of drugs you receive. Chemotherapy can cause nausea, vomiting, and hair loss.           </p>
+
+                  <p>Tests of your brain tumor cells can determine whether chemotherapy will be helpful for you. The type of brain tumor you have also helps determine whether to recommend chemotherapy.    </p>
+              </li>
+
+              <li><strong>Targeted drug therapy     </strong>
+                  <br><br>
+                  <p>Targeted drug treatments focus on specific abnormalities present within cancer cells. By blocking these abnormalities, targeted drug treatments can cause cancer cells to die.           </p>
+
+                  <p>Targeted therapy drugs are available for certain types of brain tumors, and many more are being studied in clinical trials. Your doctor may have your tumor cells tested to see whether targeted therapy is likely to be an effective treatment for your brain tumor.      </p>
+              </li>
+
+              <li><strong>Rehabilitation after treatment          </strong>
+                  <br><br>
+                  <p>Because brain tumors can develop in parts of the brain that control motor skills, speech, vision, and thinking, rehabilitation may be a necessary part of recovery. Depending on your needs, your doctor may refer you to: </p>
+                      <ul>
+                          <li>Physical therapy to help you regain lost motor skills or muscle strength                                                       </li>
+                          <li>Occupational therapy to help you get back to your normal daily activities, including work, after a brain tumor or other illness</li>
+                          <li>Speech therapy with specialists in speech difficulties (speech pathologists) to help if you have difficulty speaking           </li>
+                          <li>Tutoring for school-age children to help kids cope with changes in their memory and thinking after a brain tumor               </li>
+                      </ul>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+  <!--  <section id="vl" class="bg-cus"> -->
+
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="color: white;">Brain Tumor</h2>
+                    <br>
+                </div>
+            </div>
+
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample" style="width: 100%">
+  <div class="accordion-item bg-secondary" >
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+      <button class="accordion-button" style="height: 100px;"type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        About
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"  aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+          <p>A brain tumor is a mass or growth of abnormal cells in your brain.</p>
+          <p>Many different types of brain tumors exist. Some brain tumors are noncancerous (benign), and some brain tumors are cancerous (malignant). Brain tumors can begin in your brain (primary brain tumors), or cancer can begin in other parts of your body and spread to your brain as secondary (metastatic) brain tumors.</p>
+          <p>How quickly a brain tumor grows can vary greatly. The growth rate as well as the location of a brain tumor determines how it will affect the function of your nervous system.</p>
+          <p>Brain tumor treatment options depend on the type of brain tumor you have, as well as its size and location.</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Symptoms
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+          <p>The signs and symptoms of a brain tumor vary greatly and depend on the brain tumor's size, location, and rate of growth. </p>
+          <p>General signs and symptoms caused by brain tumors may include:                                                           </p>
+          <ul>
+          <li>New onset or change in the pattern of headaches                                            </li>
+          <li>Headaches that gradually become more frequent and more severe                              </li>
+          <li>Unexplained nausea or vomiting                                                             </li>
+          <li>Vision problems, such as blurred vision, double vision, or loss of peripheral vision       </li>
+          <li>Gradual loss of sensation or movement in an arm or a leg                                   </li>
+          <li>Difficulty with balance                                                                    </li>
+          <li>Speech difficulties                                                                        </li>
+          <li>Feeling very tired                                                                         </li>
+          <li>Confusion in everyday matters                                                              </li>
+          <li>Difficulty making decisions                                                                </li>
+          <li>Inability to follow simple commands                                                        </li>
+          <li>Personality or behavior changes                                                            </li>
+          <li>Seizures, especially in someone who doesn't have a history of seizures                </li>
+        <li>Hearing problems                                                                           </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
+        Causes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+      <div class="accordion-body">
+          <ul>
+              <li><strong>Brain tumors that begin in the brain</strong>
+                  <br>
+                  <br>
+                  <p>Primary brain tumors originate in the brain itself or tissues close to it, such as in the brain-covering membranes (meninges), cranial nerves, pituitary gland, or pineal gland.</p>
+                  <p>Primary brain tumors begin when normal cells develop changes (mutations) in their DNA. A cell's DNA contains the instructions that tell a cell what to do. The mutations tell the cells to grow and divide rapidly and to continue living when healthy cells would die. The result is a mass of abnormal cells, which forms a tumor.</p>
+                  <p>In adults, primary brain tumors are much less common than secondary brain tumors, in which cancer begins elsewhere and spreads to the brain.</p>
+                  <p>Many different types of primary brain tumors exist. Each gets its name from the type of cells involved. </p>
+                  <p>Examples include:</p>
+                  <ul>
+                      <li><strong>Gliomas:</strong> These tumors begin in the brain or spinal cord and include astrocytomas, ependymomas, glioblastomas, oligoastrocytomas, and oligodendrogliomas.                                                                                     </li>
+                      <li><strong>Meningiomas:</strong> A meningioma is a tumor that arises from the membranes that surround your brain and spinal cord (meninges). Most meningiomas are noncancerous.                                                                                                  </li>
+                      <li><strong>Acoustic neuromas (schwannomas):</strong> These are benign tumors that develop on the nerves that control balance and hearing leading from your inner ear to your brain.                                                                                             </li>
+                      <li><strong>Pituitary adenomas:</strong> These are tumors that develop in the pituitary gland at the base of the brain. These tumors can affect the pituitary hormones with effects throughout the body.                                                                          </li>
+                      <li><strong>Medulloblastomas:</strong> These cancerous brain tumors are most common in children, though they can occur at any age. A medulloblastoma starts in the lower back part of the brain and tends to spread through the spinal fluid.                       </li>
+                      <li><strong>Germ cell tumors:</strong> Germ cell tumors may develop during childhood when the testicles or ovaries will form. But sometimes germ cell tumors affect other parts of the body, such as the brain.                                                                 </li>
+                      <li><strong>Craniopharyngiomas:</strong> These rare tumors start near the brain's pituitary gland, which secretes hormones that control many body functions. As the craniopharyngioma slowly grows, it can affect the pituitary gland and other structures near the brain.       </li>
+                  </ul> </li>
+              <br>
+
+              <li><strong>Cancer that begins elsewhere and spreads to the brain</strong>
+                  <br>
+                  <br>
+                  <p>Secondary (metastatic) brain tumors are tumors that result from cancer that starts elsewhere in your body and then spreads (metastasizes) to your brain.</p>
+                  <p>Secondary brain tumors most often occur in people who have a history of cancer. Rarely, a metastatic brain tumor may be the first sign of cancer that began elsewhere in your body.</p>
+                  <p>In adults, secondary brain tumors are far more common than primary brain tumors.</p>
+                  <p>Any cancer can spread to the brain, but common types include:</p>
+                  <ul>
+                      <li><strong>Breast cancer </strong></li>
+                      <li><strong>Colon cancer  </strong></li>
+                      <li><strong>Kidney cancer </strong></li>
+                      <li><strong>Lung cancer   </strong></li>
+                      <li><strong>Melanoma </strong></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+        Risk Factors
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+      <div class="accordion-body">
+          <p>In most people with primary brain tumors, the cause of the tumor isn't clear. But doctors have identified some factors that may increase your risk of a brain tumor.</p>
+          <p>Risk factors include:</p>
+          <ul>
+              <li><strong>Radiation exposure:</strong> People who have been exposed to a type of radiation called ionizing radiation have an increased risk of brain tumors. Examples of ionizing radiation include radiation therapy used to treat cancer and radiation exposure caused by atomic bombs.</li>
+              <li><strong>Family history of brain tumors:</strong> A small portion of brain tumors occurs in people with a family history of brain tumors or a family history of genetic syndromes that increase the risk of brain tumors.</li>
+          </ul>
+
+      </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
+        Complications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+      <div class="accordion-body">
+          <p>Your brain is in charge of everything your body does, including vision, hearing, speech, and movement. As brain cancer grows, it presses on and damages areas that control these things. That can lead to complications like headaches, seizures, vision and hearing loss, and balance issues. Your doctor will help you manage these problems while you get treatments for your cancer.</p>
+<ul>
+    <li><strong>Fatigue</strong>
+        <p>A lot of people with brain cancer deal with this. You feel exhausted because your body uses a lot of energy to fight off the tumor. Cancer-related fatigue isn't normal tiredness. It wipes you out. Cancer also makes it harder for you to sleep soundly. Even when you can sleep, it doesn't always relieve the weariness. To curb fatigue, break up tasks into small chunks and take rest breaks during the day.</p></li>
+
+    <li><strong>Headaches</strong>
+        <p>About half of people with brain cancer get headaches. The tumor itself doesn't cause pain. But as it grows, it can press on sensitive nerves and blood vessels in the brain. Headaches can last for several hours. They can feel dull, aching, pounding, or throbbing. They’re often worse in the morning or can flare up when you cough or exercise. Your doctor can prescribe medicine to help control the pain.</p></li>
+
+    <li><strong>Nausea and Vomiting</strong>
+        <p>A tumor can make you sick to your stomach if it presses on certain areas of your brain. Cancer treatments like radiation and chemotherapy also cause nausea and vomiting. "Anti-emetic" medicines relieve nausea. They come in a liquid, tablet, and capsule -- or as a suppository if you're too sick to swallow medicine. Call your doctor if you can't keep down any foods or fluids, or if you've been throwing up for more than 24 hours.</p></li>
+
+    <li><strong>Speech and Language Problems</strong>
+        <p>Cancer can affect parts of your brain that help you speak and process language. You might struggle to find the right words, or mix up words when you describe objects ("chair" instead of "table,” for instance). It can also be harder to understand what other people say or to follow a conversation. Language problems can be frustrating. Relax and slow down when you speak. A speech and language therapist can also help with communication.</p></li>
+    <li><strong>Vision Problems</strong>
+        <p>A brain area called the occipital lobe processes the images your eyes see. A tumor in this part of the brain could affect your vision. Blurred vision, double vision, and floating spots can all be signs of a brain tumor. Your sight might go gray when you stand up or change position quickly. If you have these symptoms, see your doctor for a vision test. Surgery and other treatments that shrink the tumor can improve vision problems.</p></li>
+
+    <li><strong>Hearing Loss</strong>
+<p>A tumor can put pressure on the nerves in your inner ear that move sound from your ear to your brain. Depending on where the tumor is, you might first lose the ability to hear high-pitched or low-pitched sounds. Ringing in the ears is also common. The hearing loss can come on slowly, and it might only be in one ear. See your doctor for a hearing test and treatment options.
+</p></li>
+    <li><strong>Balance Issues</strong>
+        <p>The cerebellum, an area in the lower part of your brain, controls your coordination and balance. This region helps keep you steady on your feet. A tumor in the cerebellum can throw off your balance and cause you to stumble or drop things. If you have balance problems, see a physical therapist. You might need a walker or cane to help you get around safely. Wear shoes with non-skid soles, and avoid walking on uneven or slippery surfaces.</p></li>
+
+    <li><strong>Personality and Mood Changes</strong>
+<p>More than half of people with brain cancer have personality or mood changes. It's common to feel more angry, withdrawn, anxious, or irritable than usual. Some of these changes may be part of your response to your cancer diagnosis and treatment. Others start when the tumor grows into areas of your brain that control mood and emotion. Talk with your doctor or a mental health specialist. Therapy can help you manage what you're going through.
+</p></li>
+    <li><strong>Deep Vein Thrombosis (DVT)</strong>
+<p>Tumors release chemicals that make your body more likely to form blood clots. Nearly 1 in 5 people with brain tumors get deep vein thrombosis (DVT), a clot in a deep vein in the leg. If the clot moves into your lungs (pulmonary embolism), it could be life-threatening. See a doctor if you have swelling, redness, and tenderness in your leg. Taking blood thinners will stop the clot from getting bigger and prevent new clots from forming.
+</p></li>
+    <li><strong>Memory Loss</strong>
+<p>If you're more forgetful, it could be due to both your cancer and its treatments. Tumors can harm short-term and long-term memory, depending on their location. Chemotherapy and other treatments affect concentration and leave you mentally foggy. You may hear it called "chemo brain." Use a notebook, daily planner, and smartphone apps to remind you. An occupational therapist can show you how to make work and home tasks easier.
+</p></li>
+    <li><strong>Seizures</strong>
+<p>About 60% of people with brain cancer get seizures, which are sudden bursts of abnormal electrical activity in the brain. Tumors may trigger them by changing brain cells or chemicals in a way that makes nerve cells fire too often. During a seizure, some people shake. Others stare off into space. Anti-seizure medicines can help. Also, avoid triggers, like loud noises or too little sleep.
+</p></li>
+    <li><strong>Numbness and Weakness</strong>
+<p>A brain area called the parietal lobe helps you process the sensation of touch. A tumor in this part of your brain can cause numbness or a tingling sensation that feels like pins and needles. Often the numbness affects only one side of your body, such as one arm or leg. One side of your body might also be weaker than the other. Tell your doctor about these symptoms.
+</p></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading6">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
+        Diagnosis
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+      <div class="accordion-body">
+          <p>If it's suspected that you have a brain tumor, your doctor may recommend several tests and procedures, including:</p>
+<ul>
+    <li><strong>A neurological exam </strong>
+        <p>A neurological exam may include, among other things, checking your vision, hearing, balance, coordination, strength, and reflexes. Difficulty in one or more areas may provide clues about the part of your brain that could be affected by a brain tumor.</p></li>
+
+<li><strong>Imaging tests </strong>
+    <p><strong>Magnetic resonance imaging (MRI)</strong> is commonly used to help diagnose brain tumors. Sometimes a dye is injected through a vein in your arm during your MRI study.</p>
+
+    <p>Several specialized MRI scan components — including functional MRI, perfusion MRI and magnetic resonance spectroscopy — may help your doctor evaluate the tumor and plan treatment.</p>
+
+    <p>Sometimes other imaging tests are recommended in certain situations, including <strong>computerized tomography (CT)</strong> and <strong>positron emission tomography (PET)</strong>.</p>
+</li>
+
+    <li><strong>Collecting and testing a sample of abnormal tissue (biopsy)</strong>
+        <p>A biopsy can be performed as part of an operation to remove the brain tumor, or a biopsy can be performed using a needle.</p>
+
+        <p>A <strong>stereotactic needle biopsy</strong> may be done for brain tumors in hard-to-reach areas or very sensitive areas within your brain that might be damaged by a more extensive operation. Your neurosurgeon drills a small hole into your skull. A thin needle is then inserted through the hole. Tissue is removed using the needle, which is frequently guided by CT or MRI scanning.</p>
+
+        <p>The biopsy sample is then viewed under a microscope to determine if it's cancerous or benign. Sophisticated laboratory tests can give your doctor clues about your prognosis and your treatment options. Studying your biopsy sample and determining exactly which type of brain tumor you have is a complex process. </p>
+    </li>
+</ul>
+          <p>If you're uncertain about your diagnosis, consider seeking a second opinion at a medical center where many brain biopsies are evaluated every year.</p>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Treatment
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+          <p>Treatment for a brain tumor depends on the type, size, and location of the tumor, as well as your overall health and your preferences.</p>
+          <ul>
+              <li><strong>Surgery</strong>
+                  <br><br>
+                  <p>If the brain tumor is located in a place that makes it accessible for an operation, your surgeon will work to remove as much of the brain tumor as can be done safely.</p>
+
+                  <p>Some brain tumors are small and easy to separate from surrounding brain tissue, which makes complete surgical removal possible. Other brain tumors can't be separated from surrounding tissue or they're located near sensitive areas in your brain, making surgery risky. In these situations, your doctor removes as much of the tumor as is safe.                            </p>
+
+                  <p>Even removing a portion of the brain tumor may help reduce your signs and symptoms.         </p>
+
+                  <p>Surgery to remove a brain tumor carries risks, such as infection and bleeding. Other risks may depend on the part of your brain where your tumor is located. For instance, surgery on a tumor near nerves that connect to your eyes may carry a risk of vision loss.                                                                                         </p>
+              </li>
+              <li><strong>Radiation therapy</strong>
+                  <br><br>
+              <p>Radiation therapy uses high-energy beams, such as X-rays or protons, to kill tumor cells. Radiation therapy can come from a machine outside your body (external beam radiation), or, very rarely, radiation can be placed inside your body close to your brain tumor (brachytherapy). </p>
+
+              <p><strong>External beam radiation </strong>can focus just on the area of your brain where the tumor is located, or it can be applied to your entire brain (whole-brain radiation). Whole-brain radiation is most often used to treat cancer that spreads to the brain from some other part of the body and forms multiple tumors in the brain.  </p>
+
+              <p>Traditionally, radiation therapy uses X-rays, but a newer form of this treatment uses proton beams. <strong>Proton beam therapy</strong> allows doctors to control the radiation more precisely. It may help treat brain tumors in children and tumors that are very close to sensitive areas of the brain. Proton beam therapy isn't as widely available as traditional X-ray radiation therapy.</p>
+
+                <p>Side effects of radiation therapy depend on the type and dose of radiation you receive. Common side effects during or immediately following radiation include fatigue, headaches, memory loss, scalp irritation, and hair loss.</p>
+              </li>
+              <li><strong>Radiosurgery </strong>
+                  <br><br>
+              <p><strong>Stereotactic radiosurgery</strong>, which uses small gamma rays to deliver a precise dose of radiation to the target.Stereotactic radiosurgery is not a form of surgery in the traditional sense. Instead, radiosurgery uses multiple beams of radiation to give a highly focused form of radiation treatment to kill the tumor cells in a very small area. Each beam of radiation isn't particularly powerful, but the point where all the beams meet — at the brain tumor — receives a very large dose of radiation to kill the tumor cells.    </p>
+
+                  <p>There are different types of technology used in radiosurgery to deliver radiation to treat brain tumors, such as a Gamma Knife or linear accelerator. </p>
+
+                  <p>Radiosurgery is typically done in one treatment, and usually, you can go home the same day.       </p> </li>
+
+              <li><strong>Chemotherapy</strong>
+                  <br><br>
+                  <p><strong>Chemotherapy</strong> uses drugs to kill tumor cells. Chemotherapy drugs can be taken orally in pill form or injected into a vein (intravenously). The chemotherapy drug used most often to treat brain tumors is temozolomide (Temodar). Other chemotherapy drugs may be recommended depending on the type of cancer.  </p>
+
+                  <p>Chemotherapy side effects depend on the type and dose of drugs you receive. Chemotherapy can cause nausea, vomiting, and hair loss.           </p>
+
+                  <p>Tests of your brain tumor cells can determine whether chemotherapy will be helpful for you. The type of brain tumor you have also helps determine whether to recommend chemotherapy.    </p>
+              </li>
+
+              <li><strong>Targeted drug therapy     </strong>
+                  <br><br>
+                  <p>Targeted drug treatments focus on specific abnormalities present within cancer cells. By blocking these abnormalities, targeted drug treatments can cause cancer cells to die.           </p>
+
+                  <p>Targeted therapy drugs are available for certain types of brain tumors, and many more are being studied in clinical trials. Your doctor may have your tumor cells tested to see whether targeted therapy is likely to be an effective treatment for your brain tumor.      </p>
+              </li>
+
+              <li><strong>Rehabilitation after treatment          </strong>
+                  <br><br>
+                  <p>Because brain tumors can develop in parts of the brain that control motor skills, speech, vision, and thinking, rehabilitation may be a necessary part of recovery. Depending on your needs, your doctor may refer you to: </p>
+                      <ul>
+                          <li>Physical therapy to help you regain lost motor skills or muscle strength                                                       </li>
+                          <li>Occupational therapy to help you get back to your normal daily activities, including work, after a brain tumor or other illness</li>
+                          <li>Speech therapy with specialists in speech difficulties (speech pathologists) to help if you have difficulty speaking           </li>
+                          <li>Tutoring for school-age children to help kids cope with changes in their memory and thinking after a brain tumor               </li>
+                      </ul>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+                </div>
+            <br>
+            <br>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                {% load static %}
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="{%static '/assets/img/clients/creative-market.jpg'%}"></a></div>
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="{%static '/assets/img/clients/designmodo.jpg'%}"></a></div>
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="{%static '/assets/img/clients/envato.jpg'%}"></a></div>
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="{%static '/assets/img/clients/themeforest.jpg'%}"></a></div>
+            </div>
+        </div>
+    </section>
+    <!--style="background-image:url('/assets/img/map-image.png');"-->
+    <section id="contact" >
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" onclick="location.href='#home'" type="submit">Back to Top</button>
+                            </div>
+            <!--
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="contactForm" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3"><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 help-block lead"></small></div>
+                                <div class="form-group mb-3"><input class="form-control" type="email" id="email" placeholder="Your Email *" required=""><small class="form-text text-danger help-block lead"></small></div>
+                                <div class="form-group mb-3"><input class="form-control" type="tel" placeholder="Your Phone *" required=""><small class="form-text text-danger help-block lead"></small></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3"><textarea class="form-control" id="message" placeholder="Your Message *" required=""></textarea><small class="form-text text-danger help-block lead"></small></div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Brand 2022</span></div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'assets/js/script.min.js' %}"></script>
+</body>
+
+</html>
